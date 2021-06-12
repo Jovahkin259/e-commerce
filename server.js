@@ -10,6 +10,6 @@ app.use(bodyParser.json())
 app.use(errorHandler())
 app.use(morgan('dev'))
 
-app.get('/', (req, res) => res.send('Hello world'))
+app.get('/', (req, res) => res.json({ info: 'Node.js, Express, and Postgres' }))
 
 app.listen(PORT, () => console.log(`Listening on localhost:${PORT}`))
